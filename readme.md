@@ -42,7 +42,6 @@ sakla.sil("./test.sakla", "a");
 // yeni dosya içeriği c=d olur ve size {"c": "d"} olarak döndürür.
 ```
 
-Bilinen Hatalar
+Bilinen Hata(lar)
 =
-- Hep JSON.stringify() kullanmanız gerekiyor (eh belki de hata sayılmaz ama olsun)
 - Silme fonksiyonu dosyada yalnızca bir değişken varsa çalışmıyor. Kısaca dosyanızda hep bir tane fazladan değişken tutmalısınız.
