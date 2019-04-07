@@ -8,25 +8,25 @@ exports.okut = function (dosya) {
     }
 }
 exports.ekle = function (_dosya, _json) {
-    for (o in Object.entries(JSON.parse(String(_json)))[0]) {
-        var okunan = fs.appendFileSync(_dosya, fs.readFileSync(_dosya, "utf8") !== "" ? "\n" + Object.entries(JSON.parse(String(_json))).map(d => d[0][o] + '=' + d[1][o]).join('\n') : Object.entries(JSON.parse(String(_json))).map(d => d[0][o] + '=' + d[1][o]).join('\n'));
-        return okut(_dosya);
+    for (o in Object.entries(_json)[0]) {
+        var okunan = fs.appendFileSync(_dosya, fs.readFileSync(_dosya, "utf8") !== "" ? "\n" + Object.entries(_json).map(d => d[0] + '=' + d[1]).join('\n') : Object.entries(_json).map(d => d[0] + '=' + d[1]).join('\n'));
+        return exports.okut(_dosya);
     }
 }
 exports.sil = function (__dosya, __isim) {
     var okunanDosya = fs.readFileSync(__dosya, "utf8");
     if (okunanDosya.split("\n").filter(satır => /(.*)=(.*)/.exec(satır)[1] == __isim)) {
-        var _e = okut(__dosya);
+        var _e = exports.okut(__dosya);
         var _y = delete _e[__isim];
-        üzerineYaz(__dosya, JSON.stringify(_e));
-        return okut(__dosya);
+        exports.üzerineYaz(__dosya, _e);
+        return exports.okut(__dosya);
     } else {
         return "HATA: değişken yok: yalnızca daha önceden tanımlanmış değişkenler silinebilir."
     }
 }
 exports.üzerineYaz = function (___dosya, ___json) {
-    for (o in Object.entries(JSON.parse(String(___json)))[0]) {
-        var okunan = fs.writeFileSync(___dosya, Object.entries(JSON.parse(String(___json))).map(d => d[0][o] + '=' + d[1][o]).join('\n'));
-        return okut(___dosya);
+    for (o in Object.entries(_json)[0]) {
+        var okunan = fs.writeFileSync(___dosya, Object.entries(_json).map(d => d[0][o] + '=' + d[1][o]).join('\n'));
+        return exports.okut(___dosya);
     }
 }
