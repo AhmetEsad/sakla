@@ -25,8 +25,8 @@ exports.sil = function (__dosya, __isim) {
     }
 }
 exports.üzerineYaz = function (___dosya, ___json) {
-    for (o in Object.entries(_json)[0]) {
-        var okunan = fs.writeFileSync(___dosya, Object.entries(_json).map(d => d[0][o] + '=' + d[1][o]).join('\n'));
+    for (o in Object.entries(___json)[0]) {
+        var okunan = fs.writeFileSync(___dosya, Object.entries(___json).map(d => d[0][o] + '=' + d[1][o]).join('\n'));
         return exports.okut(___dosya);
     }
 }
