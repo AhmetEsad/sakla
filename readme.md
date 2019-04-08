@@ -18,7 +18,7 @@ sakla.okut("./test.sakla"); // a=b
 a=b
 c=d
 olarak varsayalım. */
-sakla.ekle("./test.sakla", JSON.stringify({"x": "y"}));
+sakla.ekle("./test.sakla", {"x": "y"});
 /* test.sakla dosyası:
 a=b
 c=d
@@ -28,7 +28,7 @@ olur. Aynı zamanda size {"a": "b", "c": "d", "x": "y"} olarak döner. */
 
 **Üzerine Yazma**
 ```js
-sakla.üzerineYaz("./test.sakla", JSON.stringify({"a": "b"}));
+sakla.üzerineYaz("./test.sakla", {"a": "b"});
 // test.sakla dosyası a=b olur.
 ```
 
