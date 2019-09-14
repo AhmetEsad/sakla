@@ -1,7 +1,7 @@
 {
   "name": "sakla",
   "version": "1.0.1",
-  "description": "Her şeyi kaydedebileceğiniz ufak veritabanı. Kolayca okunabilir. JSON olarak size geri döner. İstediğiniz dosya türünü kullanabilirsiniz. Ayrıca modül kurulumu da gerektirmez.",
+  "description": "Her şeyi kaydedebileceğiniz ufak veritabanı. Kolayca okunabilir. JSON olarak size geri döner. İstediğiniz dosya türünü kullanabilirsiniz. Modül kurulumu da gerektirmez.",
   "main": "sakla.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
